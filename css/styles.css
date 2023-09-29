@@ -1,0 +1,7 @@
+#caja{
+    width: 4em;
+    height: 4em;
+
+    border-color: 0.5em solid black; 
+    border-radius: 10%;
+}
