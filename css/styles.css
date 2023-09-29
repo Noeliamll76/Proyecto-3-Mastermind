@@ -5,3 +5,10 @@
     border-color: 0.5em solid black; 
     border-radius: 10%;
 }
+
+.inicioJuego{
+    width: 10em;
+    height: 5em;
+
+    background-color: cyan;
+}
