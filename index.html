@@ -1,36 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MASTERMIND</title>
 
-    <link rel="stylesheet" href="./css/styles.css">
-  
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MASTERMIND</title>
+
+  <link rel="stylesheet" href="./css/styles.css">
+  <!-- <style>
+    @import url('https://fonts.google.com/specimen/Chelsea+Market?query=chelsea&sort=popularity');
+    body{font-family: Chelsea;}
+  </style> -->
 
 </head>
+
 <body>
-    <div>QUE COMIENCE EL JUEGO</div> 
-    <h1><strong>Alias: </strong></h1>
-  <input type="text" name="" id="nombreUsuario">
 
-  <h1><strong>Elige los colores con los que quieres jugar</strong></h1>
-
-  <input type="color" class="color-input">
-  <div class="caja" id="caja"></div>
-  <input type="color" class="color-input">
-  <div class="caja" id="caja"></div>
-  <input type="color" class="color-input">
-  <div class="caja" id="caja"></div>
-  <input type="color" class="color-input">
-  <div class="caja" id="caja"></div>
-
-  <h1><strong>INICIAR JUEGO</strong></h1>
-  <div class="inicioJuego" id="inicioJuego"></div>
-  
+  <div class="titulo-juego">MASTERMIND</div>
 
 
-    <script src="./js/main.js"></script>
-    <script src="./js/seleccionColores.js"></script>
+  <div class="container-fluid text-center texto-inicio">
+    <div class="row justify-content-md-auto">
+      <h1><strong><u>INSTRUCCIONES DEL JUEGO</u></strong></h1>
+      <br>
+      <h3>
+        <p> El objetivo de este juego es conseguir adivinar la combinación ganadora de colores propuesta por el
+          ordenador.</p>
+        <p>Primero seleccionas los 4 COLORES con los que te gustaría jugar, y el ordenador hace una combinación que
+          estará oculta al usuario y que verás al finalizar la partida.</p>
+        <p>Tienes 10 INTENTOS de combinar los colores para conseguir adivinar la combinación correcta.</p>
+        <p> En cada partida, el ordenador señalara con color blanco la posición donde hayas acertado el color respecto a
+          la combinación ganadora.</p>
+        <p>Una vez conseguido el objetivo, se termina la partida siendo el ganador, y si no lo consigues despues de 10
+          intentos, se terminará la partida y podrás volver a intentarlo en una partida nueva.</p>
+      </h3>
+    </div>
+
+    <button class="siguiente">
+      <a href="./paginaJuego1.html" target="_self">
+        <h3><b>SIGUIENTE =></b></h3>
+      </a>
+    </button>
+
+  </div>
+
+
+  <script src="./js/main.js"></script>
+  <script src="./js/seleccionColores.js"></script>
 </body>
+
 </html>
