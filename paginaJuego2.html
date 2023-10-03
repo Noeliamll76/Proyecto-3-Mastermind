@@ -5,30 +5,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MASTERMIND</title>
-
+    
     <link rel="stylesheet" href="./css/styles.css">
-
-
+    
+    
 </head>
 
 <body>
-    <div class="container-fluid" id="contenedor-saludo">
+    <div class="row">
         <div class="titulo-juego">MASTERMIND</div>
     </div>
-
-    <div class="container-fluid" id="contenedor">
-        <button class="elemento-inicial" id="elemento1"></button>
-        <button class="elemento-inicial" id="elemento2"></button>
-        <button class="elemento-inicial" id="elemento3"></button>
-        <button class="elemento-inicial" id="elemento4"></button>
+    
+    <div class="container-fluid  fondo-partida">
+        <div class="row" id="linea-colores-seleccionados">
+            <div class="muestra-colores">COLORES SELECCIONADOS</div>
+                <button class="color-seleccionado" id="color0"></button>
+                <button class="color-seleccionado" id="color1"></button>
+                <button class="color-seleccionado" id="color2"></button>
+                <button class="color-seleccionado" id="color3"></button>
+            
+        </div>
+        
+        <div class="col">
+            <div class="row" id="linea-1">
+                <button class="bola-juego" id="elemento1"></button>
+                <button class="bola-juego" id="elemento2"></button>
+                <button class="bola-juego" id="elemento3"></button>
+                <button class="bola-juego" id="elemento4"></button>
+            </div>
+            <div class="row" id="linea-2">
+                <button class="bola-juego" id="elemento1"></button>
+                <button class="bola-juego" id="elemento2"></button>
+                <button class="bola-juego" id="elemento3"></button>
+                <button class="bola-juego" id="elemento4"></button>
+            </div>
+            <div class="row" id="linea-3">
+                <button class="bola-juego" id="elemento1"></button>
+                <button class="bola-juego" id="elemento2"></button>
+                <button class="bola-juego" id="elemento3"></button>
+                <button class="bola-juego" id="elemento4"></button>
+            </div>
+            <div class="row" id="linea-4">
+                <button class="bola-juego" id="elemento1"></button>
+                <button class="bola-juego" id="elemento2"></button>
+                <button class="bola-juego" id="elemento3"></button>
+                <button class="bola-juego" id="elemento4"></button>
+            </div>
+            <div class="row" id="linea-5">
+                <button class="bola-juego" id="elemento1"></button>
+                <button class="bola-juego" id="elemento2"></button>
+                <button class="bola-juego" id="elemento3"></button>
+                <button class="bola-juego" id="elemento4"></button>
+            </div>
+        </div>
+        <div class="col">
+            <button class="atras">
+                <a href="./paginaJuego1.html" target="_self">
+                    <h3><b>Volver selección</b></h3>
+                </a>
+            </button>
+        </div>
     </div>
-
-
-
 
 
     <script src="./js/main.js"></script>
-    <script src="./js/seleccionColores.js"></script>
+    <script src="./js/game.js"></script>
+
 </body>
 
 </html>

@@ -16,33 +16,46 @@
 
 <body>
 
-  <div class="container-fluid" id="contenedor-saludo">
+  <div class="container-fluid">
     <div class="titulo-juego">MASTERMIND</div>
-    <h2><strong>Alias: </strong></h2>
-    <input type="text" name="" id="nombreUsuario">
   </div>
 
-  <h1><strong>Elige los colores con los que quieres jugar</strong></h1>
+  <div class="container-fluid text-center fondo-texto">
+    <div class="row justify-content-md-auto">
+      <div class="row">
+        <h2>Nombre del jugador: <input type="text" id="nombreUsuario"></h2>
+      </div>
 
-  <input type="color" class="color-input">
-  <div class="caja" id="caja"></div>
-  <input type="color" class="color-input">
-  <div class="caja" id="caja"></div>
-  <input type="color" class="color-input">
-  <div class="caja" id="caja"></div>
-  <input type="color" class="color-input">
-  <div class="caja" id="caja"></div>
+      <h2><strong>Elige los colores con los que quieres jugar</strong></h2>
 
-  <div class="inicioJuego" id="inicioJuego">
-    <h3><b>INICIAR JUEGO</b></h3>
+      <div class="row">
+        <div class="col">
+          <input type="color" class="color-input">
+          <!-- <div class="caja" id="caja"></div> -->
+          <input type="color" class="color-input">
+          <!-- <div class="caja" id="caja"></div> -->
+          <input type="color" class="color-input">
+          <!-- <div class="caja" id="caja"></div> -->
+          <input type="color" class="color-input">
+        </div>
+        <div class="col">
+          <div class="caja" id="caja"></div>
+        </div>
+      </div>
+    </div>
+
+    <button class="siguiente" id="inicioJuego">
+      <a href="./paginaJuego2.html" target="_self">
+        <h3><b>INICIAR JUEGO</b></h3>
+      </a>
+    </button>
+
   </div>
-
 
 
 
 
   <script src="./js/main.js"></script>
-  <script src="./js/seleccionColores.js"></script>
 </body>
 
 </html>

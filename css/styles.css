@@ -8,7 +8,8 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    
+
+    /* position: relative; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -17,61 +18,136 @@ body {
     /* font-family: 'Chelsea'; */
 }
 
-.titulo-juego{
-    font-size: 75px;
+@media only screen and (max-width: 990px) {
+    html {
+        font-size: 0.7em;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    html {
+        font-size: 0.5em;
+    }
+}
+
+@media only screen and (max-width: 680px) {
+    html {
+        font-size: 0.33em;
+    }
+}
+
+.titulo-juego {
+    font-size: 5em;
     color: rgb(233, 207, 75);
-    
+    margin-top: 0;
+    /* position: absolute;  */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.texto-inicio{
+.muestra-colores {
+    font-size: 1em;
+    /* color: rgb(233, 207, 75); */
+    /* position: absolute; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fondo-texto {
     width: 60em;
     height: 30em;
     margin: 0;
     padding: 3em;
+    /* position: absolute; */
 
     background-color: rgb(233, 207, 75);
+    opacity: 0.8;
+    border-radius: 10%;
     box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 
     color: black;
-    display: flex; 
+    display: flex;
     flex-direction: row;
     justify-content: center;
-   
+
+}
+
+.fondo-partida {
+    width: 60em;
+    height: 30em;
+    margin: 0;
+    padding: 3em;
+    /* position: absolute; */
+
+    background-color: rgb(233, 207, 75);
+    opacity: 0.8;
+
+    border-radius: 10%;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+
+
+    color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
 }
 
 .siguiente {
-    width: 20em;
+    width: 10em;
     height: 3em;
-    margin-top: 30em; 
+    margin-top: 30em;
 
     color: yellow;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    border-radius: 10%;
+    /* position: absolute; */
+
+    background-color: rgb(233, 207, 75);
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.atras {
+    width: 10em;
+    height: 3em;
+    margin-top: 30em;
+
+    color: yellow;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 10%;
+    /* position: absolute; */
 
     background-color: rgb(233, 207, 75);
     box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 
 #caja {
-    width: 4em;
-    height: 4em;
+    width: 6em;
+    height: 6em;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-color: 0.5em solid black;
     border-radius: 10%;
+
 }
 
-.inicioJuego {
-    width: 10em;
+.bola-juego {
+    width: 5em;
     height: 5em;
-
-    background-color: cyan;
+    border-radius: 50%;
+    box-shadow: rgb(241, 241, 126) 0px 0px 10px;
 }
 
-.elemento-inicial {
+.color-seleccionado {
     width: 3em;
     height: 3em;
     border-radius: 50%;
