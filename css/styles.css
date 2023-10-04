@@ -9,7 +9,6 @@ body {
     background-attachment: fixed;
     background-size: cover;
 
-    /* position: relative; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -42,33 +41,33 @@ body {
     margin-top: 0;
     /* position: absolute;  */
     display: flex;
-    justify-content: center;
-    align-items: center;
+   
 }
 
 .muestra-colores {
     font-size: 1em;
-    /* color: rgb(233, 207, 75); */
-    /* position: absolute; */
+    color: rgb(233, 207, 75); 
+     position: absolute; 
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
 }
+ 
 
 .fondo-texto {
     width: 60em;
     height: 30em;
     margin: 0;
     padding: 3em;
-    /* position: absolute; */
+    position: relative; 
 
-    background-color: rgb(233, 207, 75);
+    /* background-color: rgb(233, 207, 75); */
     opacity: 0.8;
     border-radius: 10%;
     box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 
-    color: black;
+    color: rgb(233, 207, 75);
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -78,11 +77,12 @@ body {
 .fondo-partida {
     width: 60em;
     height: 30em;
-    margin: 0;
+   
     padding: 3em;
-    /* position: absolute; */
+    margin-top: 20em;
+    position: relative;
 
-    background-color: rgb(233, 207, 75);
+   /* background-color: rgb(233, 207, 75);*/
     opacity: 0.8;
 
     border-radius: 10%;
@@ -91,59 +91,98 @@ body {
 
     color: black;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 
 }
 
+.row{
+    display: flex;
+    flex-direction: row;
+}
+
+
 .siguiente {
-    width: 10em;
+    width: 15em;
     height: 3em;
     margin-top: 30em;
 
+    position: absolute;
     color: yellow;
-    display: flex;
-    justify-content: space-around;
+    display: flex; 
+    justify-content: center;
     align-items: center;
     border-radius: 10%;
-    /* position: absolute; */
 
-    background-color: rgb(233, 207, 75);
-    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    background-color: yellow;
+   
 }
 
 .atras {
     width: 10em;
     height: 3em;
-    margin-top: 30em;
+    margin-top: 0em;
+    left: 10em;
 
+    position: absolute;
     color: yellow;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     border-radius: 10%;
-    /* position: absolute; */
+ 
 
-    background-color: rgb(233, 207, 75);
+    background-color: yellow;
     box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 
-#caja {
-    width: 6em;
-    height: 6em;
+#caja0 {
+    width: 4em;
+    height: 4em;
 
     display: flex;
     justify-content: center;
     align-items: center;
     border-color: 0.5em solid black;
     border-radius: 10%;
-
 }
 
+#caja1 {
+    width: 4em;
+    height: 4em;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-color: 0.5em solid black;
+    border-radius: 10%;
+}
+#caja2 {
+    width: 4em;
+    height: 4em;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-color: 0.5em solid black;
+    border-radius: 10%;
+}
+#caja3 {
+    width: 4em;
+    height: 4em;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-color: 0.5em solid black;
+    border-radius: 10%;
+}
 .bola-juego {
     width: 5em;
     height: 5em;
     border-radius: 50%;
+    background-color: white;
     box-shadow: rgb(241, 241, 126) 0px 0px 10px;
 }
 
@@ -152,4 +191,14 @@ body {
     height: 3em;
     border-radius: 50%;
     box-shadow: rgb(241, 241, 126) 0px 0px 10px;
+}
+
+.comprobar {
+    width: 4em;
+    height: 3em;
+    margin-top: 20em;
+
+    position: absolute;
+    left: 70em;
+    bottom: 20em;
 }

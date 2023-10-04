@@ -1,6 +1,6 @@
 const nombreUsuario = document.getElementById('nombreUsuario')
 
-nombreUsuario.addEventListener('input', () => {	
+nombreUsuario.addEventListener('input', () => {
 	localStorage.setItem('nombreUsuario', nombreUsuario.value)
 	console.log(localStorage.getItem('nombreUsuario'));
 })
@@ -8,37 +8,62 @@ nombreUsuario.addEventListener('input', () => {
 
 
 
-//SELECCION DEL USUARIO DE LOS COLORES CON LOS QUE DESEA JUGAR arrayColoresSeleccionados[]
+//SELECCION COLORES  arrayColoresSeleccionados[]
 const coloresSeleccionados = document.getElementsByClassName('color-input')
-const caja = document.getElementById('caja')
+const caja0 = document.getElementById('caja0')
+const caja1 = document.getElementById('caja1')
+const caja2 = document.getElementById('caja2')
+const caja3 = document.getElementById('caja3')
+
 const arrayColoresSeleccionados = [];
 
-for (i = 0; i < 4; i++) {
-	coloresSeleccionados[i].addEventListener('input', (event) => {
-		const valorColor = event.target.value
-		console.log(valorColor)
-		caja.style.backgroundColor = valorColor
-		arrayColoresSeleccionados.push(valorColor)
-		//hacer aque los colores no esten repetidos en la seleccion
-		localStorage.setItem('colores', JSON.stringify(arrayColoresSeleccionados))
-		console.log(arrayColoresSeleccionados)
-	})
-}
+coloresSeleccionados[0].addEventListener('input', (event) => {
+	const valorColor = event.target.value
+	console.log(valorColor)
+	caja0.style.backgroundColor = valorColor
+	arrayColoresSeleccionados.push(valorColor)
+	localStorage.setItem('colores', JSON.stringify(arrayColoresSeleccionados))
+
+})
+coloresSeleccionados[1].addEventListener('input', (event) => {
+	const valorColor = event.target.value
+	console.log(valorColor)
+	caja1.style.backgroundColor = valorColor
+	arrayColoresSeleccionados.push(valorColor)
+	localStorage.setItem('colores', JSON.stringify(arrayColoresSeleccionados))
+
+})
+coloresSeleccionados[2].addEventListener('input', (event) => {
+	const valorColor = event.target.value
+	console.log(valorColor)
+	caja2.style.backgroundColor = valorColor
+	arrayColoresSeleccionados.push(valorColor)
+	localStorage.setItem('colores', JSON.stringify(arrayColoresSeleccionados))
+
+})
+coloresSeleccionados[3].addEventListener('input', (event) => {
+	const valorColor = event.target.value
+	console.log(valorColor)
+	caja3.style.backgroundColor = valorColor
+	arrayColoresSeleccionados.push(valorColor)
+	localStorage.setItem('colores', JSON.stringify(arrayColoresSeleccionados))
+})
+console.log(arrayColoresSeleccionados)
 
 
-// RANDOM PARA SELECCIONAR COLORES DE LA JUGADA SIN REPETICION DE COLORES arrayInicioJuego[] 
-const inicioCombinacionJuego = document.getElementById("inicioJuego");
-const controlColoresRandom=arrayColoresSeleccionados;
+// RANDOM COLORES DE LA JUGADA GANADORA SIN REPETICION DE COLORES arrayCombinacionGanadora[] 
+const inicioRandom = document.getElementById("inicioJuego");
+const controlColoresRandom = arrayColoresSeleccionados;
 
-inicioCombinacionJuego.addEventListener('click', ()=> {
-	const arrayInicioJuego = [];
-	for (let i = 4; i > 0; i--) {
+inicioRandom.addEventListener('click', () => {
+	const arrayCombinacionGanadora = [];
+	for (let i = 4; i > 0; i--) {        //Inicio i con 4, porque la utilizo para Math.random en cada vuelta y que tambien itera//
 		let numRandom = parseInt(Math.floor(Math.random() * i));
-		arrayInicioJuego[i-1] = controlColoresRandom[numRandom];
-		controlColoresRandom.splice(numRandom, 1);  
+		arrayCombinacionGanadora[i - 1] = controlColoresRandom[numRandom];
+		controlColoresRandom.splice(numRandom, 1);
 	}
-		console.log(arrayInicioJuego);
-		localStorage.setItem('combinacionGanadora', JSON.stringify(arrayInicioJuego))
+	console.log(arrayCombinacionGanadora);
+	localStorage.setItem('combinacionGanadora', JSON.stringify(arrayCombinacionGanadora))
 
 
 })
