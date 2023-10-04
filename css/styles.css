@@ -185,7 +185,17 @@ body {
     background-color: white;
     box-shadow: rgb(241, 241, 126) 0px 0px 10px;
 }
+.punto-comprobacion {
+    width: 2em;
+    height: 2em;
+    justify-content: center;
+    border-radius: 50%;
 
+    border-style: solid;
+    border-color: yellow;
+    background-color: white;
+    box-shadow: rgb(241, 241, 126) 0px 0px 10px;
+}
 .color-seleccionado {
     width: 3em;
     height: 3em;

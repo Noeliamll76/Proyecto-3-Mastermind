@@ -167,30 +167,22 @@ colorSeleccionado[3].addEventListener('click', () => {
 //COMPARAR JUGADA CON COMBINACIÓN GANADORA
 const combinacionGanadora = JSON.parse(localStorage.getItem('combinacionGanadora'))
 const comprobar = document.getElementById("comprobar");
-//const estadoPosicion = document.createElement('div')
 
-
-comprobar.addEventListener('click', () =>
- {
+comprobar.addEventListener('click', () => {
     console.log("he hecho click en comprobar")
-    for (let i = 0; i < jugada.length; i++) 
-        {
-        if (combinacionGanadora[i] === jugada[i]) console.log("la posicion", (i), "es correcta")
-        else console.log("la posicion", (i), "no es correcta")
+    for (let i = 0; i < jugada.length; i++) {
+        if (combinacionGanadora[i] === jugada[i]) {
+            console.log("la posicion", (i), "es correcta")
+            const punto0 = document.getElementById('punto' + i + '-1')
+            console.log (punto0)
+            punto0.style.backgroundColor = 'green'
+            console.log(punto0)
         }
-    })
+        else {
+            console.log("la posicion", (i), "no es correcta")
+            const punto0 = document.getElementById('punto' + i + '-1')
+            console.log(punto0)
+        }
+    }
+})
 
-
-
-//     rowComprobacion.innerHTML = `
-//     <div id="rowsPlayed" class="row-board"> Parent div to allow appendchilds
-//         <div class="palette-game">hola</div>
-//         <div class="palette-game">hola</div>
-//         <div class="palette-game">hola</div>
-//         <div class="palette-game">hola</div>
-//     <div id="rowsPlayed" class="row-board">
-//         <div class="palette-game" style="background-color:${current1}">1</div>
-//         <div class="palette-game" style="background-color:${current2}">2</div>
-//         <div class="palette-game" style="background-color:${current3}">3</div>
-//         <div class="palette-game" style="background-color:${current4}">4</div>
-//     </div>`;
