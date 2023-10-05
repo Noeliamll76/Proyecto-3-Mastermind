@@ -7,11 +7,7 @@
   <title>MASTERMIND</title>
 
   <link rel="stylesheet" href="./css/styles.css">
-  <!-- <style>
-    @import url('https://fonts.google.com/specimen/Chelsea+Market?query=chelsea&sort=popularity');
-    body{font-family: Chelsea;}
-  </style> -->
-
+ 
 </head>
 
 <body>
@@ -20,24 +16,24 @@
     <div class="titulo-juego">MASTERMIND</div>
   </div>
 
-  <div class="container text-center fondo-texto">
-    <div class="col justify-content-md-auto">
-      <h2>Nombre del jugador: <input type="text" id="nombreUsuario"></h2>
+  <div class="container text-center fondo-texto"> 
+    <div class="row justify-content-md-auto">
+      <h2>Nombre del jugador: <input type="text"  id="nombreUsuario" required minlength="3" maxlength="15"></h2>
     </div>
-    <div class="col">
+    <div class="row">
       <h2><strong>Selecciona colores </strong></h2>
       <input type="color" class="color-input">
       <input type="color" class="color-input">
       <input type="color" class="color-input">
       <input type="color" class="color-input">
     </div>
-     <div class="col">
+     <div class="row">
       <div class="caja" id="caja0"></div>
       <div class="caja" id="caja1"></div>
       <div class="caja" id="caja2"></div>
       <div class="caja" id="caja3"></div>
      </div> 
-  </div>
+  </div> 
 
   <button class="siguiente" id="inicioJuego">
     <a href="./paginaJuego2.html" target="_self">

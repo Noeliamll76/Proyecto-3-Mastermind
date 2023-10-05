@@ -1,14 +1,11 @@
 const nombreUsuario = document.getElementById('nombreUsuario')
 
 nombreUsuario.addEventListener('input', () => {
-	if (((nombreUsuario).length) == 0 || ((nombreUsuario).length) > 10)
-		return
-	else {
 		localStorage.setItem('nombreUsuario', nombreUsuario.value)
 		console.log(localStorage.getItem('nombreUsuario'));
-	}
+	
 })
-//añadir la validación si no esta vacio
+
 
 //SELECCION COLORES  arrayColoresSeleccionados[] y sin pasar de 4 pero pudiendo rectificar
 const coloresSeleccionados = document.getElementsByClassName('color-input')
