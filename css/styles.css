@@ -14,7 +14,7 @@ body {
     justify-content: center;
     align-items: center;
     overflow-x: hidden;
-    /* font-family: 'Chelsea'; */
+   
 }
 
 @media only screen and (max-width: 990px) {
@@ -39,8 +39,10 @@ body {
     font-size: 5em;
     color: rgb(233, 207, 75);
     margin-top: 0;
-    /* position: absolute;  */
+ 
     display: flex;
+    justify-content: center;
+    align-items: center;
    
 }
 
@@ -102,6 +104,10 @@ body {
     flex-direction: row;
 }
 
+.col{
+    display: flex;
+    flex-direction: column;
+}
 
 .siguiente {
     width: 15em;
@@ -206,9 +212,9 @@ body {
 #comprobar {
     width: 4em;
     height: 3em;
-    margin-top: 20em;
+    margin-top: 25em;
 
     position: absolute;
-    left: 70em;
+    left: 40em;
     bottom: 20em;
 }
