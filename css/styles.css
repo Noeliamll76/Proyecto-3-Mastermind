@@ -37,7 +37,7 @@ body {
 
 .titulo-juego {
     font-size: 5em;
-    color: rgb(233, 207, 75);
+    color: rgb(228, 143, 47);
     
 }
 
@@ -63,31 +63,27 @@ body {
     border-radius: 10%;
     box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 
-    color: rgb(233, 207, 75);
+    color: rgb(233, 207, 75); 
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 
 .fondo-partida {
-    width: 60em;
-    height: 30em;
+    /* width: 60em; */
+    /* height: 30em; */
    
-    padding: 3em;
-    margin-top: 20em;
-    position: relative;
+    /* position: relative; */
+    /* padding: 3em; */
+    /* margin-top: 20em; */
+    /* display: flex;  */
+    /* flex-direction: column; */
+    /* justify-content: center; */
+    /* align-items: center; */
 
     opacity: 0.8;
-
     border-radius: 10%;
     box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
-
-    color: black;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
 }
 
 .row{
@@ -100,25 +96,12 @@ body {
     flex-direction: column;
 }
 
-.siguiente {
-    width: 15em;
-    height: 3em;
-    margin-top: 30em; 
-
-    position: absolute;
-    color: yellow;
-    display: flex; 
-    justify-content: center;
-    align-items: center;
-    border-radius: 10%;
-    background-color: yellow;
-   }
 
 .caja {
     width: 4em;
     height: 4em;
     margin: 0.5em;
-
+    
     display: flex; 
     flex-direction: row;
     justify-content: center;
@@ -138,7 +121,7 @@ body {
     height: 2em;
     justify-content: center;
     border-radius: 50%;
-
+    
     border-style: solid;
     border-color: yellow;
     background-color: white;
@@ -151,12 +134,30 @@ body {
     box-shadow: rgb(241, 241, 126) 0px 0px 10px;
 }
 
-#comprobar {
-    width: 4em;
+.siguiente {
+    width: 15em;
     height: 3em;
-    margin-top: 10em;
+    margin-top: 30em; 
 
     position: absolute;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    border-radius: 10%;
+    background-color: rgb(228, 143, 47);
+   }
+
+#comprobar {
+    width: 6em;
+    height: 3em;
+    
+    position: absolute; 
     left: 40em;
-    bottom: 20em;
+    bottom: 45em; 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    border-radius: 40%;
+    background-color: rgb(245, 116, 24) ;
+    color: blue;
 }

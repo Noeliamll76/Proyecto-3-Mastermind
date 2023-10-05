@@ -17,13 +17,10 @@ const caja3 = document.getElementById('caja3')
 const arrayColoresSeleccionados = [];
 
 const funcionSeleccionarColores=(i) => {
-	console.log('antes de entrar en addEven')
 	coloresSeleccionados[i].addEventListener('input', (event) => {
 		const valorColor = event.target.value
-		console.log(valorColor)
 		arrayColoresSeleccionados[i]=valorColor
 		localStorage.setItem('colores', JSON.stringify(arrayColoresSeleccionados))
-		console.log ('valor de i antes de entrar en el case' +i)
 		switch (i) {
 			case 0: caja0.style.backgroundColor = valorColor;
 			case 1: caja1.style.backgroundColor = valorColor;
@@ -32,10 +29,8 @@ const funcionSeleccionarColores=(i) => {
 			default: return
 		}
 	})
-	console.log('despues de salir en addEvent' + i)
 }
 for (let i = 0; i < 4; i++) {
-	console.log('valor dentro del for'+i)
 	funcionSeleccionarColores(i)
 }
 
