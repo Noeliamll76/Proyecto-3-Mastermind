@@ -61,6 +61,8 @@ colorSeleccionado[3].addEventListener('click', () => {
 //COMPARAR JUGADA CON COMBINACIÓN GANADORA
 const combinacionGanadora = JSON.parse(localStorage.getItem('combinacionGanadora'))
 const comprobar = document.getElementById("comprobar");
+// const ganador=Boolean
+// ganador=true
 
 comprobar.addEventListener('click', () => {
 
@@ -74,10 +76,14 @@ comprobar.addEventListener('click', () => {
         }
         else {
             console.log("la posicion", (i),"en la fila", (fila), "no es correcta")
+            // ganador=false
         }
     }
-    if (fila<3) {fila++}
-    else { console.log ("SE ACABARON LAS OPORTUNIDADES") }
+    // if (ganador)
+    //     {window.location.href="pantallaGanador.html"}
+    if (fila<5) {fila++}
+    else { console.log ("SE ACABARON LAS OPORTUNIDADES");}
+        // window.location.href="pantallaPerdedor.html" }
 
     jugada=[]
     console.log (fila)

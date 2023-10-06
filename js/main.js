@@ -21,13 +21,11 @@ const funcionSeleccionarColores=(i) => {
 		const valorColor = event.target.value
 		arrayColoresSeleccionados[i]=valorColor
 		localStorage.setItem('colores', JSON.stringify(arrayColoresSeleccionados))
-		switch (i) {
-			case 0: caja0.style.backgroundColor = valorColor;
-			case 1: caja1.style.backgroundColor = valorColor;
-			case 2: caja2.style.backgroundColor = valorColor;
-			case 3: caja3.style.backgroundColor = valorColor;
-			default: return
-		}
+		if (i===0) caja0.style.backgroundColor = valorColor
+		else if (i===1) caja1.style.backgroundColor = valorColor
+		else if (i===2) caja2.style.backgroundColor = valorColor
+		else if (i===3) caja3.style.backgroundColor = valorColor
+		
 	})
 }
 for (let i = 0; i < 4; i++) {

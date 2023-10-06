@@ -7,39 +7,35 @@
   <title>MASTERMIND</title>
 
   <link rel="stylesheet" href="./css/styles.css">
- 
+
 </head>
 
 <body>
 
-  <div class="row">
-    <div class="titulo-juego">MASTERMIND</div>
-  </div>
-
-  <div class="container text-center fondo-texto"> 
-    <div class="row justify-content-md-auto">
-      <h2>Nombre del jugador: <input type="text"  id="nombreUsuario" required minlength="3" maxlength="15"></h2>
-    </div>
-    <div class="row">
+  <div class="container">
+    <div class="contenido">
+      <div class="titulo-juego">MASTERMIND</div>
+      <h2>Nombre del jugador: <input type="text" id="nombreUsuario" required minlength="3" maxlength="15"></h2>
+      
       <h2><strong>Selecciona colores </strong></h2>
-      <input type="color" class="color-input">
-      <input type="color" class="color-input">
-      <input type="color" class="color-input">
-      <input type="color" class="color-input">
+      <div class="zonaColores">
+        <input type="color" class="color-input">
+        <input type="color" class="color-input">
+        <input type="color" class="color-input">
+        <input type="color" class="color-input">
+      </div>
+      <div class="zonaColores">
+        <div class="caja" id="caja0"></div>
+        <div class="caja" id="caja1"></div>
+        <div class="caja" id="caja2"></div>
+        <div class="caja" id="caja3"></div>
     </div>
-     <div class="row">
-      <div class="caja" id="caja0"></div>
-      <div class="caja" id="caja1"></div>
-      <div class="caja" id="caja2"></div>
-      <div class="caja" id="caja3"></div>
-     </div> 
-  </div> 
-
-  <button class="siguiente" id="inicioJuego">
-    <a href="./paginaJuego2.html" target="_self">
-      <h3><b>INICIAR JUEGO</b></h3>
-    </a>
-  </button>
+      <button class="siguiente" id="inicioJuego">
+        <a href="./paginaJuego2.html" target="_self">
+          <h3><b>INICIAR JUEGO</b></h3>
+        </a>
+      </button>
+    </div>
 
   </div>
 

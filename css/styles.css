@@ -3,110 +3,82 @@ body {
     height: 100vh;
     margin: 0;
     padding: 0;
-
     background-image: url(../imagenes/acero-puntitos.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     overflow-x: hidden;
-   
 }
 
 @media only screen and (max-width: 990px) {
-    html {
-        font-size: 0.7em;
-    }
+    html { font-size: 0.7em;    }
 }
-
 @media only screen and (max-width: 750px) {
-    html {
-        font-size: 0.5em;
-    }
+    html { font-size: 0.5em;  }
+}
+@media only screen and (max-width: 680px) {
+    html { font-size: 0.33em; }
 }
 
-@media only screen and (max-width: 680px) {
-    html {
-        font-size: 0.33em;
-    }
+.container {
+    width: 80em;
+    height: 50em;
+    margin: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.contenido {
+    width: 75em;
+    height: 45em;
+    justify-content: center;
+    
+    border-radius: 10%;
+    color: wheat;
 }
 
 .titulo-juego {
     font-size: 5em;
     color: rgb(228, 143, 47);
-    
+    display: flex;
+    justify-content: center;
+}
+
+.siguiente {
+    width: 15em;
+    height: 3em;
+    margin-bottom: 2em;
+    border-radius: 10%;
+    background-color: rgb(228, 143, 47);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.zonaColores {
+    width: 80em;
+    height: 5em;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.lineaJugada {
+    width: 80em;
+    height: 5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.caja {
+    width: 7em;
+    height: 4em;
+    border-radius: 20%;
 }
 
 .muestra-colores {
     font-size: 1em;
-    color: rgb(233, 207, 75); 
-    position: absolute; 
-    
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-}
- 
-
-.fondo-texto {
-    width: 60em;
-    height: 30em;
-    margin: 0;
-    padding: 3em;
-    position: relative; 
-
-    opacity: 0.8;
-    border-radius: 10%;
-    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
-
-    color: rgb(233, 207, 75); 
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-.fondo-partida {
-    /* width: 60em; */
-    /* height: 30em; */
-   
-    /* position: relative; */
-    /* padding: 3em; */
-    /* margin-top: 20em; */
-    /* display: flex;  */
-    /* flex-direction: column; */
-    /* justify-content: center; */
-    /* align-items: center; */
-
-    opacity: 0.8;
-    border-radius: 10%;
-    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
-}
-
-.row{
-    display: flex;
-    flex-direction: row;
-}
-
-.col{
-    display: flex;
-    flex-direction: column;
-}
-
-
-.caja {
-    width: 4em;
-    height: 4em;
-    margin: 0.5em;
-    
-    display: flex; 
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10%;
+    color: rgb(233, 207, 75);
 }
 
 .bola-juego {
@@ -116,17 +88,17 @@ body {
     background-color: white;
     box-shadow: rgb(241, 241, 126) 0px 0px 10px;
 }
+
 .punto-comprobacion {
     width: 2em;
     height: 2em;
-    justify-content: center;
     border-radius: 50%;
-    
+    background-color: white;
     border-style: solid;
     border-color: yellow;
-    background-color: white;
     box-shadow: rgb(241, 241, 126) 0px 0px 10px;
 }
+
 .color-seleccionado {
     width: 3em;
     height: 3em;
@@ -134,30 +106,11 @@ body {
     box-shadow: rgb(241, 241, 126) 0px 0px 10px;
 }
 
-.siguiente {
-    width: 15em;
-    height: 3em;
-    margin-top: 30em; 
-
-    position: absolute;
-    display: flex; 
-    justify-content: center;
-    align-items: center;
-    border-radius: 10%;
-    background-color: rgb(228, 143, 47);
-   }
-
 #comprobar {
     width: 6em;
     height: 3em;
-    
-    position: absolute; 
-    left: 40em;
-    bottom: 45em; 
-    display: flex; 
-    justify-content: center;
-    align-items: center;
+
     border-radius: 40%;
-    background-color: rgb(245, 116, 24) ;
+    background-color: rgb(245, 116, 24);
     color: blue;
 }
