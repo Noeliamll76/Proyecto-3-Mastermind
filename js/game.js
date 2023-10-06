@@ -61,12 +61,13 @@ colorSeleccionado[3].addEventListener('click', () => {
 //COMPARAR JUGADA CON COMBINACIÓN GANADORA
 const combinacionGanadora = JSON.parse(localStorage.getItem('combinacionGanadora'))
 const comprobar = document.getElementById("comprobar");
-// const ganador=Boolean
-// ganador=true
+let ganador=Boolean
+const nombreJugador=localStorage.getItem('nombreUsuario')
+
 
 comprobar.addEventListener('click', () => {
-
-    console.log("he hecho click en comprobar")
+    ganador=true
+    console.log("he hecho click en comprobar y ganador es"+ganador)
     for (let i = 0; i < jugada.length ; i++) {
         if (combinacionGanadora[i] === jugada[i]) {
             console.log("la posicion", (i), "en la fila", (fila),"es correcta")
@@ -76,16 +77,23 @@ comprobar.addEventListener('click', () => {
         }
         else {
             console.log("la posicion", (i),"en la fila", (fila), "no es correcta")
-            // ganador=false
+            ganador=false
         }
     }
-    // if (ganador)
-    //     {window.location.href="pantallaGanador.html"}
-    if (fila<5) {fila++}
-    else { console.log ("SE ACABARON LAS OPORTUNIDADES");}
-        // window.location.href="pantallaPerdedor.html" }
+    if (ganador)
+       {console.log ("entra en if de ganador")
+        window.location.href="pantallaGanador.html"
+       return nombreJugador}
+    else if (fila<5) 
+            {console.log ("entra en else if para incrementar fila")
+                fila++}
+         else { 
+            console.log ("SE ACABARON LAS OPORTUNIDADES")
+            window.location.href="pantallaPerdedor.html" 
+            return nombreJugador}
 
-    jugada=[]
+    console.log ("array jugada limpio")
+     jugada=[]
     console.log (fila)
 
 })

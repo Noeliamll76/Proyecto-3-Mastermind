@@ -3,9 +3,7 @@ const nombreUsuario = document.getElementById('nombreUsuario')
 nombreUsuario.addEventListener('input', () => {
 		localStorage.setItem('nombreUsuario', nombreUsuario.value)
 		console.log(localStorage.getItem('nombreUsuario'));
-	
 })
-
 
 //SELECCION COLORES  arrayColoresSeleccionados[] y sin pasar de 4 pero pudiendo rectificar
 const coloresSeleccionados = document.getElementsByClassName('color-input')
@@ -15,6 +13,7 @@ const caja2 = document.getElementById('caja2')
 const caja3 = document.getElementById('caja3')
 
 const arrayColoresSeleccionados = [];
+localStorage.setItem('colores',[])
 
 const funcionSeleccionarColores=(i) => {
 	coloresSeleccionados[i].addEventListener('input', (event) => {
@@ -25,18 +24,17 @@ const funcionSeleccionarColores=(i) => {
 		else if (i===1) caja1.style.backgroundColor = valorColor
 		else if (i===2) caja2.style.backgroundColor = valorColor
 		else if (i===3) caja3.style.backgroundColor = valorColor
-		
-	})
+		})
 }
 for (let i = 0; i < 4; i++) {
 	funcionSeleccionarColores(i)
 }
 
-
  //RANDOM COLORES DE LA JUGADA GANADORA SIN REPETICION DE COLORES arrayCombinacionGanadora[] 
 console.log(arrayColoresSeleccionados)
 const inicioRandom = document.getElementById("inicioJuego");
 const controlColoresRandom = arrayColoresSeleccionados;
+localStorage.setItem('combinacionGanadora',[])
 
 inicioRandom.addEventListener('click', () => {
 	const arrayCombinacionGanadora = [];
