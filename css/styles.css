@@ -8,6 +8,7 @@ body {
     background-attachment: fixed;
     background-size: cover;
     overflow-x: hidden;
+    z-index: 0;
 }
 
 @media only screen and (max-width: 990px) {
@@ -113,3 +114,4 @@ body {
     background-color: rgb(245, 116, 24);
     color: blue;
 }
+

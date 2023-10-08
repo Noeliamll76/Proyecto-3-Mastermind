@@ -61,6 +61,7 @@ colorSeleccionado[3].addEventListener('click', () => {
 //COMPARAR JUGADA CON COMBINACIÓN GANADORA
 const combinacionGanadora = JSON.parse(localStorage.getItem('combinacionGanadora'))
 const comprobar = document.getElementById("comprobar");
+const gifResultado = document.getElementById("gifResultado");
 let ganador = Boolean
 const nombreJugador = localStorage.getItem('nombreUsuario')
 
@@ -81,38 +82,37 @@ comprobar.addEventListener('click', () => {
         }
     }
     if (ganador) {
-        setTimeout(() => {
-            console.log("ENHORABUENA " + nombreJugador + " LO HAS CONSEGUIDO");
-            let resultado = window.confirm(nombreJugador + ' HAS GANADO!!!! ' + 'Seguimos jugando?');
+                setTimeout(() => {
+            console.log ("va a pantalla Ganador")
+                    let resultado = window.confirm(nombreJugador + ' HAS GANADO!!!! ' + 'Seguimos jugando?');
+            console.log ("pasa seguimos jugando y espera resultado")
             if (resultado === true) {
+                console.log ("le dices sigo jugando y le mando a juego1")
                 window.location.href = "paginaJuego1.html"
             } else {
+                console.log ("le dices  NO sigo jugando y le mando a INDEX")
                 window.alert('Hasta luego');
                 window.location.href = "index.html"
             }
-        }, 1000);}
-     
-
-    else  if (fila < 5) {
-            console.log("entra en else if para incrementar fila")
-            fila++
-            }
-        else {
-            setTimeout(() => {
-            console.log("LO SIENTO " + nombreJugador + " SE ACABARON LAS OPORTUNIDADES");
+        }, 500);
+    }
+    else if (fila < 5) {
+        console.log("entra en else if para incrementar fila")
+        fila++
+    }
+    else {
+        setTimeout(() => {
             let resultado = window.confirm(nombreJugador + ' HAS PERDIDO, se acabaron tus oportunidades!!!! ' + 'Seguimos jugando?');
             if (resultado === true) {
                 window.location.href = "paginaJuego1.html"
             } else {
                 window.location.href = "index.html"
             }
-            }, 1000);
-          
-            }
-
-console.log("array jugada limpio")
-jugada = []
-console.log(fila)
+        }, 500);
+    }
+    console.log("array jugada limpio")
+    jugada = []
+    console.log(fila)
 
 })
 
