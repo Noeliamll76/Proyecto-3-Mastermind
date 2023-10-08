@@ -76,7 +76,6 @@ body {
 }
 
 .muestra-colores {
-    font-size: 1em;
     color: rgb(233, 207, 75);
 }
 
@@ -99,16 +98,17 @@ body {
 }
 
 .color-seleccionado {
-    width: 3em;
-    height: 3em;
+    width: 4em;
+    height: 4em;
+   
     border-radius: 50%;
     box-shadow: rgb(241, 241, 126) 0px 0px 10px;
 }
 
 #comprobar {
-    width: 6em;
-    height: 3em;
-
+    width: 8em;
+    height: 4em;
+ 
     border-radius: 40%;
     background-color: rgb(245, 116, 24);
     color: blue;

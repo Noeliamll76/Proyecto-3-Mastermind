@@ -18,9 +18,9 @@ let fila = 1
 
 colorSeleccionado[0].addEventListener('click', () => {
     console.log(colorSeleccionado[0].style.backgroundColor);
-    const element = document.getElementById('elemento'+jugada.length+'-' + fila)
-    console.log('elemento'+jugada.length+'-' + fila)
-    console.log (element)
+    const element = document.getElementById('elemento' + jugada.length + '-' + fila)
+    console.log('elemento' + jugada.length + '-' + fila)
+    console.log(element)
     const color = coloresJugar[0]
     element.style.backgroundColor = color
     jugada.push(color)
@@ -28,9 +28,9 @@ colorSeleccionado[0].addEventListener('click', () => {
 })
 colorSeleccionado[1].addEventListener('click', () => {
     console.log(colorSeleccionado[1].style.backgroundColor);
-    const element = document.getElementById('elemento'+jugada.length+'-' + fila)
-    console.log('elemento'+jugada.length+'-' + fila)
-    console.log (element)
+    const element = document.getElementById('elemento' + jugada.length + '-' + fila)
+    console.log('elemento' + jugada.length + '-' + fila)
+    console.log(element)
     const color = coloresJugar[1]
     element.style.backgroundColor = color
     jugada.push(color)
@@ -38,9 +38,9 @@ colorSeleccionado[1].addEventListener('click', () => {
 })
 colorSeleccionado[2].addEventListener('click', () => {
     console.log(colorSeleccionado[2].style.backgroundColor);
-    const element = document.getElementById('elemento'+jugada.length+'-' + fila)
-    console.log('elemento'+jugada.length+'-' + fila)
-    console.log (element)
+    const element = document.getElementById('elemento' + jugada.length + '-' + fila)
+    console.log('elemento' + jugada.length + '-' + fila)
+    console.log(element)
     const color = coloresJugar[2]
     element.style.backgroundColor = color
     jugada.push(color)
@@ -48,9 +48,9 @@ colorSeleccionado[2].addEventListener('click', () => {
 })
 colorSeleccionado[3].addEventListener('click', () => {
     console.log(colorSeleccionado[3].style.backgroundColor);
-    const element = document.getElementById('elemento'+jugada.length+'-' + fila)
-    console.log('elemento'+jugada.length+'-' + fila)
-    console.log (element)
+    const element = document.getElementById('elemento' + jugada.length + '-' + fila)
+    console.log('elemento' + jugada.length + '-' + fila)
+    console.log(element)
     const color = coloresJugar[3]
     element.style.backgroundColor = color
     jugada.push(color)
@@ -61,40 +61,58 @@ colorSeleccionado[3].addEventListener('click', () => {
 //COMPARAR JUGADA CON COMBINACIÓN GANADORA
 const combinacionGanadora = JSON.parse(localStorage.getItem('combinacionGanadora'))
 const comprobar = document.getElementById("comprobar");
-let ganador=Boolean
-const nombreJugador=localStorage.getItem('nombreUsuario')
+let ganador = Boolean
+const nombreJugador = localStorage.getItem('nombreUsuario')
 
 
 comprobar.addEventListener('click', () => {
-    ganador=true
-    console.log("he hecho click en comprobar y ganador es"+ganador)
-    for (let i = 0; i < jugada.length ; i++) {
+    ganador = true
+    console.log("he hecho click en comprobar y ganador es" + ganador)
+    for (let i = 0; i < jugada.length; i++) {
         if (combinacionGanadora[i] === jugada[i]) {
-            console.log("la posicion", (i), "en la fila", (fila),"es correcta")
-            const point = document.getElementById('punto' + i + '-'+fila)
+            console.log("la posicion", (i), "en la fila", (fila), "es correcta")
+            const point = document.getElementById('punto' + i + '-' + fila)
             point.style.backgroundColor = 'green'
             console.log('punto0')
         }
         else {
-            console.log("la posicion", (i),"en la fila", (fila), "no es correcta")
-            ganador=false
+            console.log("la posicion", (i), "en la fila", (fila), "no es correcta")
+            ganador = false
         }
     }
-    if (ganador)
-       {console.log ("entra en if de ganador")
-        window.location.href="pantallaGanador.html"
-       return nombreJugador}
-    else if (fila<5) 
-            {console.log ("entra en else if para incrementar fila")
-                fila++}
-         else { 
-            console.log ("SE ACABARON LAS OPORTUNIDADES")
-            window.location.href="pantallaPerdedor.html" 
-            return nombreJugador}
+    if (ganador) {
+        setTimeout(() => {
+            console.log("ENHORABUENA " + nombreJugador + " LO HAS CONSEGUIDO");
+            let resultado = window.confirm(nombreJugador + ' HAS GANADO!!!! ' + 'Seguimos jugando?');
+            if (resultado === true) {
+                window.location.href = "paginaJuego1.html"
+            } else {
+                window.alert('Hasta luego');
+                window.location.href = "index.html"
+            }
+        }, 1000);}
+     
 
-    console.log ("array jugada limpio")
-     jugada=[]
-    console.log (fila)
+    else  if (fila < 5) {
+            console.log("entra en else if para incrementar fila")
+            fila++
+            }
+        else {
+            setTimeout(() => {
+            console.log("LO SIENTO " + nombreJugador + " SE ACABARON LAS OPORTUNIDADES");
+            let resultado = window.confirm(nombreJugador + ' HAS PERDIDO, se acabaron tus oportunidades!!!! ' + 'Seguimos jugando?');
+            if (resultado === true) {
+                window.location.href = "paginaJuego1.html"
+            } else {
+                window.location.href = "index.html"
+            }
+            }, 1000);
+          
+            }
+
+console.log("array jugada limpio")
+jugada = []
+console.log(fila)
 
 })
 
