@@ -1,20 +1,21 @@
 ## _3º Proyecto sobre el juego MASTERMIND (semana 3 y 4)_"
 
 
-<img src="https://pin.it/6pTF5wX">
+<img src="./imagenes/tablero.jpg">
+
 
 <p text-align="justify">Desarrollada como parte del proceso de aprendizaje para el desarrollo de páginas web del Bootcamp de Full Stack Developer de Geekshubs Academy, en Valencia</p>
 
 ___
 ​<br>
 <h5> Tecnologías utilizadas</h5>
-<img src="./IMAGENES/iconosCSS-HTML.png">
-<img src="./IMAGENES/iconoJS.png">
-<img src="./IMAGENES/iconoVSC.png">
+<img src="./imagenes/iconosCSS-HTML.png">
+<img src="./imagenes/iconoJS.png">
+<img src="./imagenes/iconoVSC.png">
 ​
 <p>HTML5, CSS3 y JavaScript.</p>
 ​
-[Enlace Proyecto Reto 3 MASTERMIND - Noelia Marcos]()
+[Enlace Proyecto Reto 3 MASTERMIND - Noelia Marcos](https://github.com/Noeliamll76/Proyecto-3-Mastermind)
 ​
 
 ___
@@ -42,10 +43,13 @@ La web consta de 3 páginas HTML llamadas *index.html*, *paginaJuego1.html* y *p
 Se compone de:
 
 - 🏠**INDEX.HTML**: En el codigo index.html he creado una página de instrucciones para empezar el juego, con un botón para continuar el juego.
+<img src="./imagenes/instrucciones.png">
 
 - **ESTILOS.CSS**: En este archivo he utilizado varios tipos de _shadow_ para conseguir el efecto de profundidad, relieve y efecto de botones activos.
 
 - En la siguiente pantalla he utilizado la hoja *paginaJuego1.html* donde se recoge la información para comenzar el juego, como el nombre del jugador y la selección de colores. En esta pantalla tambien aparece el botón de continuar el juego con el cual llama a la funcion de ejecución del array random ganador y pasar a la siguiente pantalla, que se ejecuta en *paginaJuego2.html* y *game.js*
+<img src="./imagenes/pantalla2.png">
+<img src="./imagenes/pantalla-juego.png">
 
 ___
 ### Observaciones: 
