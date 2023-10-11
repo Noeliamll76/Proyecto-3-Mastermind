@@ -10,63 +10,44 @@ color1.style.backgroundColor = coloresJugar[1]
 color2.style.backgroundColor = coloresJugar[2]
 color3.style.backgroundColor = coloresJugar[3]
 
-const controlColoresRandom = coloresJugar;
+//RANDOM PARA CONSEGUIR LA COMBINACIÓN GANADORA
+const controlColoresRandom = JSON.parse(localStorage.getItem('colores'))
 const arrayCombinacionGanadora = [];
-	for (let i = 4; i > 0; i--) {
-		let numRandom = parseInt(Math.floor(Math.random() * i));
-		arrayCombinacionGanadora[i - 1] = controlColoresRandom[numRandom];
-		controlColoresRandom.splice(numRandom, 1);
-	}
-	console.log("arrayCombinacionGanadora" + arrayCombinacionGanadora);
-	localStorage.setItem('combinacionGanadora', JSON.stringify(arrayCombinacionGanadora))
+for (let i = 4; i > 0; i--) {
+    let numRandom = parseInt(Math.floor(Math.random() * i));
+    arrayCombinacionGanadora[i - 1] = controlColoresRandom[numRandom];
+    controlColoresRandom.splice(numRandom, 1);
+}
+localStorage.setItem('combinacionGanadora', JSON.stringify(arrayCombinacionGanadora))
 
 //INICIAR JUGADA
 const colorSeleccionado = document.getElementsByClassName('color-seleccionado')
 let jugada = [];
 let fila = 1
-
-
 colorSeleccionado[0].addEventListener('click', () => {
-    console.log(colorSeleccionado[0].style.backgroundColor);
     const element = document.getElementById('elemento' + jugada.length + '-' + fila)
-    console.log('elemento' + jugada.length + '-' + fila)
-    console.log(element)
     const color = coloresJugar[0]
     element.style.backgroundColor = color
     jugada.push(color)
-    console.log(jugada)
 })
 colorSeleccionado[1].addEventListener('click', () => {
-    console.log(colorSeleccionado[1].style.backgroundColor);
     const element = document.getElementById('elemento' + jugada.length + '-' + fila)
-    console.log('elemento' + jugada.length + '-' + fila)
-    console.log(element)
     const color = coloresJugar[1]
     element.style.backgroundColor = color
     jugada.push(color)
-    console.log(jugada)
 })
 colorSeleccionado[2].addEventListener('click', () => {
-    console.log(colorSeleccionado[2].style.backgroundColor);
     const element = document.getElementById('elemento' + jugada.length + '-' + fila)
-    console.log('elemento' + jugada.length + '-' + fila)
-    console.log(element)
     const color = coloresJugar[2]
     element.style.backgroundColor = color
     jugada.push(color)
-    console.log(jugada)
 })
 colorSeleccionado[3].addEventListener('click', () => {
-    console.log(colorSeleccionado[3].style.backgroundColor);
     const element = document.getElementById('elemento' + jugada.length + '-' + fila)
-    console.log('elemento' + jugada.length + '-' + fila)
-    console.log(element)
     const color = coloresJugar[3]
     element.style.backgroundColor = color
     jugada.push(color)
-    console.log(jugada)
 })
-
 
 //COMPARAR JUGADA CON COMBINACIÓN GANADORA
 const combinacionGanadora = JSON.parse(localStorage.getItem('combinacionGanadora'))
@@ -74,7 +55,6 @@ const comprobar = document.getElementById("comprobar");
 const gifResultado = document.getElementById("gifResultado");
 let ganador = Boolean
 const nombreJugador = localStorage.getItem('nombreUsuario')
-
 
 comprobar.addEventListener('click', () => {
     ganador = true
@@ -87,8 +67,10 @@ comprobar.addEventListener('click', () => {
             ganador = false
         }
     }
+    console.log (ganador)
     if (ganador) {
         setTimeout(() => {
+            console.log("ganador" + ganador, "fila" + fila, "jugada" + jugada, "i" + i)
             let resultado = window.confirm(nombreJugador + ' HAS GANADO!!!! ' + 'Seguimos jugando?');
             if (resultado === true) {
                 window.location.href = "paginaJuego1.html"
