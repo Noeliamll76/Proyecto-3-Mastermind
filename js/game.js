@@ -67,10 +67,10 @@ comprobar.addEventListener('click', () => {
             ganador = false
         }
     }
-    console.log (ganador)
+    console.log (jugada.value)
+    console.log(ganador)
     if (ganador) {
         setTimeout(() => {
-            console.log("ganador" + ganador, "fila" + fila, "jugada" + jugada, "i" + i)
             let resultado = window.confirm(nombreJugador + ' HAS GANADO!!!! ' + 'Seguimos jugando?');
             if (resultado === true) {
                 window.location.href = "paginaJuego1.html"
@@ -94,6 +94,6 @@ comprobar.addEventListener('click', () => {
         }, 200);
     }
     jugada = []
-    nombreUsuario = ""
+    
 })
 
