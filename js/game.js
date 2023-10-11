@@ -70,15 +70,8 @@ comprobar.addEventListener('click', () => {
     console.log (jugada.value)
     console.log(ganador)
     if (ganador) {
-        setTimeout(() => {
-            let resultado = window.confirm(nombreJugador + ' HAS GANADO!!!! ' + 'Seguimos jugando?');
-            if (resultado === true) {
-                window.location.href = "paginaJuego1.html"
-            } else {
-                window.alert('Hasta luego');
-                window.location.href = "index.html"
-            }
-        }, 200);
+        setTimeout(() => { window.location.href = "paginaGanador.html"}, 100);
+        document.getElementById('mensaje-ganador').innerText =(nombreJugador+"HAS GANADO")
     }
     else if (fila < 5) {
         fila++
