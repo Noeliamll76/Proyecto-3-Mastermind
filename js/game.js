@@ -68,36 +68,27 @@ const nombreJugador = localStorage.getItem('nombreUsuario')
 
 comprobar.addEventListener('click', () => {
     ganador = true
-    console.log("he hecho click en comprobar y ganador es" + ganador)
     for (let i = 0; i < jugada.length; i++) {
         if (combinacionGanadora[i] === jugada[i]) {
-            console.log("la posicion", (i), "en la fila", (fila), "es correcta")
             const point = document.getElementById('punto' + i + '-' + fila)
             point.style.backgroundColor = 'green'
-            console.log('punto0')
         }
         else {
-            console.log("la posicion", (i), "en la fila", (fila), "no es correcta")
             ganador = false
         }
     }
     if (ganador) {
-                setTimeout(() => {
-            console.log ("va a pantalla Ganador")
-                    let resultado = window.confirm(nombreJugador + ' HAS GANADO!!!! ' + 'Seguimos jugando?');
-            console.log ("pasa seguimos jugando y espera resultado")
+        setTimeout(() => {
+            let resultado = window.confirm(nombreJugador + ' HAS GANADO!!!! ' + 'Seguimos jugando?');
             if (resultado === true) {
-                console.log ("le dices sigo jugando y le mando a juego1")
                 window.location.href = "paginaJuego1.html"
             } else {
-                console.log ("le dices  NO sigo jugando y le mando a INDEX")
                 window.alert('Hasta luego');
                 window.location.href = "index.html"
             }
-        }, 500);
+        }, 200);
     }
     else if (fila < 5) {
-        console.log("entra en else if para incrementar fila")
         fila++
     }
     else {
@@ -108,11 +99,9 @@ comprobar.addEventListener('click', () => {
             } else {
                 window.location.href = "index.html"
             }
-        }, 500);
+        }, 200);
     }
-    console.log("array jugada limpio")
     jugada = []
-    console.log(fila)
-
+    nombreUsuario = ""
 })
 

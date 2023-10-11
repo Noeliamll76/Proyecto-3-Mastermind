@@ -30,6 +30,15 @@ for (let i = 0; i < 4; i++) {
 	funcionSeleccionarColores(i)
 }
 
+const inicioJuego=document.getElementById("inicioJuego")
+inicioJuego.addEventListener('click',() =>{
+	if ((nombreUsuario.value==="")|| (arrayColoresSeleccionados.length<4))
+		alert("Debes introducir tu nombre y los 4 colores")
+	else {
+		window.location.href = "paginaJuego2.html"
+	}
+})
+
  //RANDOM COLORES DE LA JUGADA GANADORA SIN REPETICION DE COLORES arrayCombinacionGanadora[] 
 console.log(arrayColoresSeleccionados)
 const inicioRandom = document.getElementById("inicioJuego");
@@ -46,5 +55,3 @@ inicioRandom.addEventListener('click', () => {
 	console.log(arrayCombinacionGanadora);
 	localStorage.setItem('combinacionGanadora', JSON.stringify(arrayCombinacionGanadora))
 })
-
-

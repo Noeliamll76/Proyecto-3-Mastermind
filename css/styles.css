@@ -114,4 +114,9 @@ body {
     background-color: rgb(245, 116, 24);
     color: blue;
 }
-
+.mensaje-error {
+    width: 80em;
+    height: 5em;
+    font-size: 1em;
+    color: yellow;
+    }
