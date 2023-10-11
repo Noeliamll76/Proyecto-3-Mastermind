@@ -10,6 +10,16 @@ color1.style.backgroundColor = coloresJugar[1]
 color2.style.backgroundColor = coloresJugar[2]
 color3.style.backgroundColor = coloresJugar[3]
 
+const controlColoresRandom = coloresJugar;
+const arrayCombinacionGanadora = [];
+	for (let i = 4; i > 0; i--) {
+		let numRandom = parseInt(Math.floor(Math.random() * i));
+		arrayCombinacionGanadora[i - 1] = controlColoresRandom[numRandom];
+		controlColoresRandom.splice(numRandom, 1);
+	}
+	console.log("arrayCombinacionGanadora" + arrayCombinacionGanadora);
+	localStorage.setItem('combinacionGanadora', JSON.stringify(arrayCombinacionGanadora))
+
 //INICIAR JUGADA
 const colorSeleccionado = document.getElementsByClassName('color-seleccionado')
 let jugada = [];

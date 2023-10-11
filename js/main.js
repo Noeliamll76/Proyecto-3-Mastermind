@@ -11,7 +11,7 @@ const caja0 = document.getElementById('caja0')
 const caja1 = document.getElementById('caja1')
 const caja2 = document.getElementById('caja2')
 const caja3 = document.getElementById('caja3')
-
+console.log ("caja0"+caja0.value + "caja1" + caja1.value + "caja2" +caja2.value +"caja3"+caja3.value)
 const arrayColoresSeleccionados = [];
 localStorage.setItem('colores',[])
 
@@ -37,21 +37,4 @@ inicioJuego.addEventListener('click',() =>{
 	else {
 		window.location.href = "paginaJuego2.html"
 	}
-})
-
- //RANDOM COLORES DE LA JUGADA GANADORA SIN REPETICION DE COLORES arrayCombinacionGanadora[] 
-console.log(arrayColoresSeleccionados)
-const inicioRandom = document.getElementById("inicioJuego");
-const controlColoresRandom = arrayColoresSeleccionados;
-localStorage.setItem('combinacionGanadora',[])
-
-inicioRandom.addEventListener('click', () => {
-	const arrayCombinacionGanadora = [];
-	for (let i = 4; i > 0; i--) {
-		let numRandom = parseInt(Math.floor(Math.random() * i));
-		arrayCombinacionGanadora[i - 1] = controlColoresRandom[numRandom];
-		controlColoresRandom.splice(numRandom, 1);
-	}
-	console.log(arrayCombinacionGanadora);
-	localStorage.setItem('combinacionGanadora', JSON.stringify(arrayCombinacionGanadora))
 })
