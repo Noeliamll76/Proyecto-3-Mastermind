@@ -70,9 +70,9 @@ comprobar.addEventListener('click', () => {
     if (ganador) {
         
         window.location.href = "paginaGanador.html"
-        let nombreJugador = localStorage.getItem('nombreUsuario')
+        let nombreJugador = localStorage.getItem("nombreUsuario")
         const elemento = document.getElementById("mensaje-ganador")
-        elemento.textContent=nombreJugador
+        elemento.textContent = nombreJugador
         
         
     }
