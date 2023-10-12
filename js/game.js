@@ -54,7 +54,6 @@ const combinacionGanadora = JSON.parse(localStorage.getItem('combinacionGanadora
 const comprobar = document.getElementById("comprobar");
 const gifResultado = document.getElementById("gifResultado");
 let ganador = Boolean
-const nombreJugador = localStorage.getItem('nombreUsuario')
 
 comprobar.addEventListener('click', () => {
     ganador = true
@@ -67,11 +66,15 @@ comprobar.addEventListener('click', () => {
             ganador = false
         }
     }
-    console.log (jugada.value)
-    console.log(ganador)
+    
     if (ganador) {
-        setTimeout(() => { window.location.href = "paginaGanador.html"}, 100);
-        document.getElementById('mensaje-ganador').innerText =(nombreJugador+"HAS GANADO")
+        
+        window.location.href = "paginaGanador.html"
+        let nombreJugador = localStorage.getItem('nombreUsuario')
+        const elemento = document.getElementById("mensaje-ganador")
+        elemento.textContent=nombreJugador
+        
+        
     }
     else if (fila < 5) {
         fila++
