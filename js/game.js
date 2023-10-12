@@ -65,24 +65,17 @@ comprobar.addEventListener('click', () => {
             ganador = false
         }
     }
-    
+
     if (ganador) {
         window.location.href = "paginaGanador.html"
-                            }
+    }
     else if (fila < 5) {
         fila++
     }
     else {
-        setTimeout(() => {
-            let resultado = window.confirm(nombreJugador + ' HAS PERDIDO, se acabaron tus oportunidades!!!! ' + 'Seguimos jugando?');
-            if (resultado === true) {
-                window.location.href = "paginaJuego1.html"
-            } else {
-                window.location.href = "index.html"
-            }
-        }, 200);
+        window.location.href = "paginaPerdedor.html"
     }
     jugada = []
-    
+
 })
 

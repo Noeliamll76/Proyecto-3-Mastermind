@@ -2,43 +2,43 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MASTERMIND</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MASTERMIND</title>
 
-    <link rel="stylesheet" href="./css/styles.css">
-    <link rel="stylesheet" href="./css/estilosResultado.css">
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="./css/estilosResultado.css">
 
 
 </head>
 
 <body>
-    <div class="container">
-        <span><div class="mensaje-final" id="mensaje-perdedor">¡LO SIENTO, has perdido!</div></span>
+  <span>
+    <div id="mensaje-perdedor"></div> ¡Lo siento, vuelve a intentarlo!
+  </span>
+  <div class="burbujas">
+    <div class="burbuja"></div>
+    <div class="burbuja"></div>
+    <div class="burbuja"></div>
+    <div class="burbuja"></div>
+    <div class="burbuja"></div>
+    <div class="burbuja"></div>
+    <div class="burbuja"></div>
+    <div class="burbuja"></div>
+    <div class="burbuja"></div>
+    <div class="burbuja"></div>
+  </div>
+  <div class="container-pequeño">
+    <button class="seguir-jugando">
+      <a href="./paginaJuego1.html" target="_self">
+        <h3><b>SEGUIMOS JUGANDO</b></h3>
+      </a>
+    </button>
+  </div>
+  </div>
 
-        <div class="burbujas">
-            <div class="burbuja"></div>
-            <div class="burbuja"></div>
-            <div class="burbuja"></div>
-            <div class="burbuja"></div>
-            <div class="burbuja"></div>
-            <div class="burbuja"></div>
-            <div class="burbuja"></div>
-            <div class="burbuja"></div>
-            <div class="burbuja"></div>
-            <div class="burbuja"></div>
-        </div>
-        <br>
-        <button class="siguiente">
-            <a href="./paginaJuego1.html" target="_self">
-                <h3><b>SEGUIMOS JUGANDO</b></h3>
-            </a>
-        </button>
-    </div>
-    </div>
+  <script src="./js/perdedor.js"></script>
 
-    <script src="./js/perdedor.js"></script>
-    
 
 </body>
 
