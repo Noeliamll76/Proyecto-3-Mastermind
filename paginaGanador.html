@@ -7,13 +7,15 @@
     <title>MASTERMIND</title>
 
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/estilosResultado.css">
 
 </head>
 
 <body>
     <div class="container">
-        <span><div class="mensaje-ganador" id="mensaje-ganador"></div>¡Has ganado!</span>
-        <!-- <div class="mensaje-ganador" id="mensaje-ganador"></div> -->
+        <span>
+            <div class="mensaje-final" id="mensaje-ganador"></div>¡ENHORABUENA, has ganado!
+        </span>
         <div class="burbujas">
             <div class="burbuja"></div>
             <div class="burbuja"></div>
@@ -26,6 +28,7 @@
             <div class="burbuja"></div>
             <div class="burbuja"></div>
         </div>
+        <br>
         <button class="siguiente">
             <a href="./paginaJuego1.html" target="_self">
                 <h3><b>SEGUIMOS JUGANDO</b></h3>
@@ -34,8 +37,7 @@
     </div>
     </div>
 
-    <script src="./js/main.js"></script>
-    <script src="./js/game.js"></script>
+    <script src="./js/ganador.js"></script>
 
 </body>
 

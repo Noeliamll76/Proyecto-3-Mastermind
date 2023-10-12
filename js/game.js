@@ -52,7 +52,6 @@ colorSeleccionado[3].addEventListener('click', () => {
 //COMPARAR JUGADA CON COMBINACIÓN GANADORA
 const combinacionGanadora = JSON.parse(localStorage.getItem('combinacionGanadora'))
 const comprobar = document.getElementById("comprobar");
-const gifResultado = document.getElementById("gifResultado");
 let ganador = Boolean
 
 comprobar.addEventListener('click', () => {
@@ -68,14 +67,8 @@ comprobar.addEventListener('click', () => {
     }
     
     if (ganador) {
-        
         window.location.href = "paginaGanador.html"
-        let nombreJugador = localStorage.getItem("nombreUsuario")
-        const elemento = document.getElementById("mensaje-ganador")
-        elemento.textContent = nombreJugador
-        
-        
-    }
+                            }
     else if (fila < 5) {
         fila++
     }
