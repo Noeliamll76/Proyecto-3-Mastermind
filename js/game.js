@@ -56,26 +56,31 @@ let ganador = Boolean
 
 comprobar.addEventListener('click', () => {
     ganador = true
-    for (let i = 0; i < jugada.length; i++) {
-        if (combinacionGanadora[i] === jugada[i]) {
-            const point = document.getElementById('punto' + i + '-' + fila)
-            point.style.backgroundColor = 'green'
+    console.log("combinacion de jugada" + jugada)
+    console.log("longitud de jugada" + jugada.length)
+    if (jugada.length < 4)
+        alert("Debes introducir los 4 colores")
+
+    else {
+        for (let i = 0; i < 4; i++) {
+            if (combinacionGanadora[i] === jugada[i]) {
+                const point = document.getElementById('punto' + i + '-' + fila)
+                point.style.backgroundColor = 'green'
+            }
+            else {
+                ganador = false
+            }
+        }
+        if (ganador) {
+            window.location.href = "paginaGanador.html"
+        }
+        else if (fila < 5) {
+            fila++
         }
         else {
-            ganador = false
+            window.location.href = "paginaPerdedor.html"
         }
+        jugada = []
     }
-
-    if (ganador) {
-        window.location.href = "paginaGanador.html"
-    }
-    else if (fila < 5) {
-        fila++
-    }
-    else {
-        window.location.href = "paginaPerdedor.html"
-    }
-    jugada = []
-
-})
+    })
 
